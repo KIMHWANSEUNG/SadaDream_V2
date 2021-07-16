@@ -6,6 +6,18 @@ spring:
 ---
 
 spring:
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: "sadaream@gmail.com"
+    password: "12345678@@"
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+
   profiles: dev
   datasource:
     hikari:
@@ -21,11 +33,24 @@ spring:
       hibernate:
         default_schema: db
 
+
 jwt:
   secret: "12345678901234567890123456789010"
 
+
 ---
 spring:
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: "sadaream@gmail.com"
+    password: "12345678@@"
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
   profiles: PROD
   datasource:
     hikari:
@@ -43,3 +68,4 @@ spring:
 
 jwt:
   secret: "12345678901234567890123456789010"
+
